@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COSNOS - Software Architecture and Complex Project Management</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="gsap.min.js"></script>
+    <script src="ScrollTrigger.min.js"></script>
     <style>
         body, html {
             margin: 0;
@@ -213,6 +213,17 @@
             scrollTrigger: {
                 trigger: '.services',
                 start: 'top 70%',
+            }
+        });
+
+        gsap.from('.hero', {
+            opacity: 0,
+            y: 50,
+            stagger: 0.2,
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top 80%',
             }
         });
 
