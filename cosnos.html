@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSNOS - Software Architecture and Complex Project Management</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0a192f;
+            color: #e6f1ff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+        nav a {
+            color: #64ffda;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .tagline {
+            font-size: 1.5em;
+            color: #64ffda;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .service-card {
+            background-color: #112240;
+            padding: 30px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .service-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .unique-points {
+            margin-top: 50px;
+        }
+        .unique-points h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .point {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .point-icon {
+            font-size: 2em;
+            margin-right: 20px;
+            color: #64ffda;
+        }
+        .clients {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .client-logos {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .client-logo {
+            max-width: 150px;
+            height: auto;
+            margin: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            background-color: #112240;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="./cosnos.ico" alt="COSNOS Logo" class="logo">
+            <nav>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#unique">Our Edge</a>
+                <a href="#clients">Clients</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>COSNOS</h1>
+            <p class="tagline">The Sky Is Not The Limit</p>
+            <p>Advanced Consulting in Software Architecture and Complex Project Management</p>
+        </section>
+
+        <section id="services" class="services">
+            <div class="service-card">
+                <div class="service-icon">🏗️</div>
+                <h3>Software Architecture</h3>
+                <p>Design and consultation for building complex and efficient software systems</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚀</div>
+                <h3>Air Defense</h3>
+                <p>Unique expertise in developing advanced air defense systems</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔄</div>
+                <h3>System Integration</h3>
+                <p>Solutions for connecting and interfacing between complex systems</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Monitoring and Performance</h3>
+                <p>System monitoring and performance testing for maximum optimization</p>
+            </div>
+        </section>
+
+        <section id="unique" class="unique-points">
+            <h2>What Sets Us Apart</h2>
+            <div class="point">
+                <span class="point-icon">🎯</span>
+                <p>Striving for excellence in everything we do</p>
+            </div>
+            <div class="point">
+                <span class="point-icon">🔍</span>
+                <p>Deep understanding and analysis of complex systems - from high-level architecture to the smallest details</p>
+            </div>
+            <div class="point">
+                <span class="point-icon">💡</span>
+                <p>Integration of new technologies into existing systems</p>
+            </div>
+            <div class="point">
+                <span class="point-icon">🧠</span>
+                <p>Out-of-the-box thinking</p>
+            </div>
+            <div class="point">
+                <span class="point-icon">🤖</span>
+                <p>Utilization of AI as part of the work process</p>
+            </div>
+            <div class="point">
+                <span class="point-icon">🛡️</span>
+                <p>Analysis of vulnerabilities and provision of solutions</p>
+            </div>
+        </section>
+
+        <section id="clients" class="clients">
+            <h2>Leading Clients</h2>
+            <div class="client-logos">
+                <img src="/api/placeholder/150/80" alt="Elbit Systems" class="client-logo">
+                <img src="/api/placeholder/150/80" alt="Israel Aerospace Industries" class="client-logo">
+                <img src="/api/placeholder/150/80" alt="Rafael Advanced Defense Systems" class="client-logo">
+                <img src="/api/placeholder/150/80" alt="Ministry of Defense" class="client-logo">
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 COSNOS. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from('.hero', {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top 80%',
+            }
+        });
+
+        gsap.from('.service-card', {
+            opacity: 0,
+            y: 50,
+            stagger: 0.2,
+            duration: 0.8,
+            scrollTrigger: {
+                trigger: '.services',
+                start: 'top 70%',
+            }
+        });
+
+        gsap.from('.point', {
+            opacity: 0,
+            x: -50,
+            stagger: 0.1,
+            duration: 0.5,
+            scrollTrigger: {
+                trigger: '.unique-points',
+                start: 'top 70%',
+            }
+        });
+
+        gsap.from('.client-logo', {
+            opacity: 0,
+            scale: 0.8,
+            stagger: 0.1,
+            duration: 0.5,
+            scrollTrigger: {
+                trigger: '.clients',
+                start: 'top 80%',
+            }
+        });
+    </script>
+</body>
+</html>
