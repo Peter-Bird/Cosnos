@@ -1,0 +1,5 @@
+End Point:
+http://cos-nos.com.s3-website-us-east-1.amazonaws.com
+
+Distribution:
+E3HHWIF8Y8M6A1
