@@ -1,0 +1,169 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #d4af37; /* Gold color */
+    background-color: #1c1c1c; /* Dark gray background */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #d4af37; /* Gold color */
+}
+
+p, li {
+    color: #e0c97e; /* Lighter gold */
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1e1e1e; /* Dark gray */
+}
+
+header .logo img {
+    max-width: 100px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #d4af37; /* Gold color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #e0c97e; /* Lighter gold */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #2a2a2a, #1e1e1e); /* Gradient background */
+    color: #d4af37; /* Gold color */
+}
+
+.subtitle {
+    font-size: 1.5em;
+}
+
+.highlight {
+    color: #e0c97e; /* Lighter gold */
+}
+
+/* About Section */
+.about {
+    background-color: #1e1e1e; /* Dark gray */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Expertise List with Larger Font, Rounded Boxes, and Gold Background */
+.expertise-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap into two rows */
+    justify-content: center;
+    gap: 10px;
+    max-width: 800px; /* Controls width of the list for balanced layout */
+}
+
+.expertise-list li {
+    font-size: 1.2em;
+    padding: 15px 20px;
+    color: #333; /* Darker color for text */
+    background-color: #d4af37; /* Gold background similar to COSNOS logo */
+    border-radius: 50px; /* Rounded box */
+    min-width: 220px; /* Ensures consistent box size */
+    text-align: center;
+    opacity: 0; /* Hidden initially */
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    animation-delay: calc(var(--delay) * 0.2s);
+}
+
+.expertise-list li:nth-child(1) { --delay: 1; }
+.expertise-list li:nth-child(2) { --delay: 2; }
+.expertise-list li:nth-child(3) { --delay: 3; }
+.expertise-list li:nth-child(4) { --delay: 4; }
+.expertise-list li:nth-child(5) { --delay: 5; }
+.expertise-list li:nth-child(6) { --delay: 6; }
+.expertise-list li:nth-child(7) { --delay: 7; }
+
+/* Capabilities Section */
+.capabilities {
+    background: linear-gradient(135deg, #2a2a2a, #1c1c1c); /* Gradient background */
+    padding: 50px 20px;
+}
+
+.capability-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.capability-cards .card {
+    background-color: #2e2e2e; /* Slightly lighter gray for card background */
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    color: #e0c97e; /* Lighter gold */
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.capability-cards .card img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.capability-cards .card h3 {
+    color: #d4af37; /* Gold color */
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Experience Section */
+.experience {
+    background-color: #1e1e1e; /* Dark gray */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #2a2a2a; /* Darker gray */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c; /* Very dark gray */
+    color: #d4af37; /* Gold color */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
