@@ -4,113 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COSNOS - Software Architecture and Complex Project Management</title>
+    <link rel="icon" href="./mnt/data/cosnosicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <script src="gsap.min.js"></script>
     <script src="ScrollTrigger.min.js"></script>
     <style>
         body, html {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0a192f;
-            color: #e6f1ff;
+            font-family: 'Oswald', sans-serif;
+            background-color: rgb(29, 29, 29); /* Dark background from icon */
+            color: #e6e6e6; /* Light text color */
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
+
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            background-color: rgb(29, 29, 29); /* Dark gray for header */
+            padding: 10px 0; /* Reduced padding */
         }
-        .logo {
-            width: 150px;
-            height: auto;
+
+        nav {
+            flex-grow: 1;
+            text-align: left;
         }
+
         nav a {
-            color: #64ffda;
+            color: #00aaff; /* Blue for the navigation menu */
             text-decoration: none;
             margin-left: 20px;
             font-weight: bold;
         }
+
+        nav a:hover {
+            color: #e6e6e6; /* Light hover effect */
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            text-align: right;
+        }
+
         .hero {
             text-align: center;
-            padding: 100px 0;
+            padding: 50px 0; /* Reduced padding */
+            background-color: rgb(56, 55, 55);
         }
+
         h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
+            font-size: 4em; /* Larger font size for COSNOS */
+            margin-bottom: 10px; /* Reduced margin */
+            color: #e2cf22; /* Blue color */
+            text-transform: uppercase;
+            letter-spacing: 0.2em; /* Increased letter spacing */
+            font-weight: 900; /* Extra bold */
         }
+
         .tagline {
             font-size: 1.5em;
-            color: #64ffda;
+            color: #ebca10; /* Gold color */
         }
+
+        .desc {
+            font-size: 1.5em;
+            color: #c7e737; /*  color */
+        }
+
         .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            display: flex; /* Changed from grid to flexbox for inline layout */
+            justify-content: space-between; /* Distribute boxes evenly */
+            flex-wrap: wrap;
+            margin-top: 20px;
         }
+
         .service-card {
-            background-color: #112240;
-            padding: 30px;
+            flex: 1;
+            max-width: 22%; /* Smaller boxes, fitting in one line */
+            margin: 10px; /* Add margin between boxes */
+            background-color: rgb(68, 66, 66);
+            padding: 20px; /* Reduced padding */
             border-radius: 10px;
             transition: transform 0.3s ease;
+            color: hsl(192, 51%, 90%);
+        }
+        .service-icon {
+            font-size: 3em;
         }
         .service-card:hover {
             transform: translateY(-10px);
         }
-        .service-icon {
-            font-size: 3em;
-            margin-bottom: 20px;
+
+        .services h3 {
+            margin-bottom: 10px; /* Bring boxes closer to the headline */
         }
+
         .unique-points {
-            margin-top: 50px;
+            margin-top: 20px;
         }
+
         .unique-points h2 {
             text-align: center;
-            margin-bottom: 30px;
-        }
-        .point {
-            display: flex;
-            align-items: center;
             margin-bottom: 20px;
         }
-        .point-icon {
-            font-size: 2em;
-            margin-right: 20px;
-            color: #64ffda;
-        }
+
         .clients {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 20px;
         }
+
         .client-logos {
             display: flex;
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
-            margin-top: 30px;
+            margin-top: 20px;
         }
-        .client-logo {
-            max-width: 150px;
-            height: auto;
-            margin: 20px;
-        }
+
         footer {
             text-align: center;
             padding: 20px 0;
-            margin-top: 50px;
-            background-color: #112240;
+            background-color: rgb(29, 29, 29);
+        }
+        
+        /* Style for the symbol before COSNOS */
+        .symbol {
+            width: 60px;
+            height: auto;
+            vertical-align: middle;
+            margin-right: 15px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="./cosnos.ico" alt="COSNOS Logo" class="logo">
             <nav>
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
@@ -118,14 +153,16 @@
                 <a href="#clients">Clients</a>
                 <a href="#contact">Contact</a>
             </nav>
+            <img src="./cosnosIcon.png" alt="COSNOS Logo" class="logo">
         </header>
 
         <section class="hero">
-            <h1>COSNOS</h1>
+            <h1><img src="./cosnosIcon.png" class="symbol">COSNOS</h1>
             <p class="tagline">The Sky Is Not The Limit</p>
-            <p>Advanced Consulting in Software Architecture and Complex Project Management</p>
+            <p class="desc"> Consulting in Software Architecture and Complex Project Management</p>
         </section>
 
+        <!-- Services Section -->
         <section id="services" class="services">
             <div class="service-card">
                 <div class="service-icon">🏗️</div>
@@ -133,7 +170,7 @@
                 <p>Design and consultation for building complex and efficient software systems</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🚀</div>
+                <div class="service-icon" >🚀</div>
                 <h3>Air Defense</h3>
                 <p>Unique expertise in developing advanced air defense systems</p>
             </div>
@@ -149,49 +186,13 @@
             </div>
         </section>
 
-        <section id="unique" class="unique-points">
-            <h2>What Sets Us Apart</h2>
-            <div class="point">
-                <span class="point-icon">🎯</span>
-                <p>Striving for excellence in everything we do</p>
-            </div>
-            <div class="point">
-                <span class="point-icon">🔍</span>
-                <p>Deep understanding and analysis of complex systems - from high-level architecture to the smallest details</p>
-            </div>
-            <div class="point">
-                <span class="point-icon">💡</span>
-                <p>Integration of new technologies into existing systems</p>
-            </div>
-            <div class="point">
-                <span class="point-icon">🧠</span>
-                <p>Out-of-the-box thinking</p>
-            </div>
-            <div class="point">
-                <span class="point-icon">🤖</span>
-                <p>Utilization of AI as part of the work process</p>
-            </div>
-            <div class="point">
-                <span class="point-icon">🛡️</span>
-                <p>Analysis of vulnerabilities and provision of solutions</p>
-            </div>
-        </section>
-
-        <section id="clients" class="clients">
-            <h2>Leading Clients</h2>
-            <div class="client-logos">
-                <img src="/api/placeholder/150/80" alt="Elbit Systems" class="client-logo">
-                <img src="/api/placeholder/150/80" alt="Israel Aerospace Industries" class="client-logo">
-                <img src="/api/placeholder/150/80" alt="Rafael Advanced Defense Systems" class="client-logo">
-                <img src="/api/placeholder/150/80" alt="Ministry of Defense" class="client-logo">
-            </div>
-        </section>
-
+        <!-- Footer Section -->
         <footer>
             <p>&copy; 2024 COSNOS. All rights reserved.</p>
         </footer>
     </div>
 
+    <!-- Animation Script -->
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
@@ -214,28 +215,6 @@
             scrollTrigger: {
                 trigger: '.services',
                 start: 'top 70%',
-            }
-        });
-
-        gsap.from('.point', {
-            opacity: 0,
-            x: -50,
-            stagger: 0.1,
-            duration: 0.5,
-            scrollTrigger: {
-                trigger: '.unique-points',
-                start: 'top 70%',
-            }
-        });
-
-        gsap.from('.client-logo', {
-            opacity: 0,
-            scale: 0.8,
-            stagger: 0.1,
-            duration: 0.5,
-            scrollTrigger: {
-                trigger: '.clients',
-                start: 'top 80%',
             }
         });
     </script>
